@@ -45,6 +45,7 @@
                 fill="#000" />
             </svg>
             <span class="visually-hidden">Избранное</span>
+            <span class="navigation-icon-circle">12</span>
           </a>
         </li>
         <li class="navigation-item">
@@ -159,10 +160,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <span class="stars-wrapping">
-            <span class="visually-hidden">Количество звезд рейтинга</span>
-          </span>
-          <span class="raiting">Рейтинг: 8,5</span>
+          <div class="stars">
+            <span class="stars-items stars-items-four"></span>
+            <span class="visually-hidden">4 Звезды</span>
+            <span class="raiting">Рейтинг: 8,5</span>
+          </div>
         </li>
         <li class="hotel-card">
           <a class="hotel-card-link-image" href="">
@@ -178,10 +180,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <span class="stars-wrapping">
-            <span class="visually-hidden">Количество звезд рейтинга</span>
-          </span>
-          <span class="raiting">Рейтинг: 8,9</span>
+          <div class="stars">
+            <span class="stars-items stars-items-three"></span>
+            <span class="visually-hidden">4 Звезды</span>
+            <span class="raiting">Рейтинг: 8,9</span>
+          </div>
         </li>
         <li class="hotel-card">
           <a class="hotel-card-link-image" href="">
@@ -197,10 +200,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main hotel-button-current" href="#">в избранном</a>
           </div>
-          <span class="stars-wrapping">
-            <span class="visually-hidden">Количество звезд рейтинга</span>
-          </span>
-          <span class="raiting">Рейтинг: 9,2</span>
+          <div class="stars">
+            <span class="stars-items stars-items-two"></span>
+            <span class="visually-hidden">4 Звезды</span>
+            <span class="raiting">Рейтинг: 9,2</span>
+          </div>
         </li>
         <li class="hotel-card">
           <a class="hotel-card-link-image" href="">
@@ -216,14 +220,15 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <span class="stars-wrapping">
-            <span class="visually-hidden">Количество звезд рейтинга</span>
-          </span>
-          <span class="raiting">Рейтинг: 9,2</span>
+          <div class="stars">
+            <span class="stars-items stars-items-two"></span>
+            <span class="visually-hidden">4 Звезды</span>
+            <span class="raiting">Рейтинг: 9,2</span>
+          </div>
         </li>
       </ul>
       <div class="hotel-load-more">
-        <button class="button button-main" type="button">Загрузить ещё</button>
+        <button class="button button-large button-main" type="button">Загрузить ещё</button>
       </div>
       <div class="pagination-container">
         <ul class="pagination">
@@ -266,8 +271,8 @@
         <label class="subscribe-field">
           <span class="visually-hidden">Email</span>
           <input class="field-input" placeholder="Ваш e-mail" type="email" required>
+          <button class="button button-large button-main" type="submit">Подписаться</button>
         </label>
-        <button class="button button-large button-main" type="submit">Подписаться</button>
       </form>
     </section>
     <div class="page-footer-container">
