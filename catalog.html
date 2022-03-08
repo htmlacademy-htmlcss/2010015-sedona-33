@@ -73,52 +73,91 @@
           </li>
         </ul>
         <section class="hotel-catalog">
-          <h2 class="visually-hidden" hidden>Список гостиниц с фильтрами</h2>
+          <h2 class="visually-hidden">Список гостиниц с фильтрами</h2>
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <div class="catalog-filter-container">
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Инфраструктура:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="swimming-pool" checked>Бассейн
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="parking" checked>Парковка
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="checkbox" name="wifi">Wi-Fi
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="catalog-filter-group">
-                <legend class="catalog-filter-title">Тип жилья:</legend>
-                <ul class="catalog-filter-list">
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="hotel" checked>Гостиница
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="Motel">Мотель
-                    </label>
-                  </li>
-                  <li class="catalog-filter-item">
-                    <label class="control">
-                      <input class="control-input" type="radio" name="product-group" value="Apartments">Апартаменты
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <div class="catalog-button-holder">
-                <button class="button button-small button-main" type="submit" value="Apply">Применить</button>
-                <button class="button button-reset" type="reset" value="Reset">Сбросить</button>
+              <div class="catalog-filter-holder-left">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Инфраструктура:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="checkbox" name="swimming-pool" checked>
+                        <span class="control-mark control-mark-checkbox"></span>
+                        <span class="control-label">Бассейн</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="checkbox" name="parking" checked>
+                        <span class="control-mark control-mark-checkbox"></span>
+                        <span class="control-label">Парковка</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="checkbox" name="wifi">
+                        <span class="control-mark control-mark-checkbox"></span>
+                        <span class="control-label">Wi-Fi</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title">Тип жилья:</legend>
+                  <ul class="catalog-filter-list">
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="radio" name="product-group" value="hotel" checked>
+                        <span class="control-mark control-mark-radio"></span>
+                        <span class="control-label">Гостиница</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="radio" name="product-group" value="Motel">
+                        <span class="control-mark control-mark-radio"></span>
+                        <span class="control-label">Мотель</span>
+                      </label>
+                    </li>
+                    <li class="catalog-filter-item">
+                      <label class="control">
+                        <input class="visually-hidden control-input" type="radio" name="product-group" value="Apartments">
+                        <span class="control-mark control-mark-radio"></span>
+                        <span class="control-label">Апартаменты</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+              </div>
+              <div class="catalog-filter-holder-right">
+                <fieldset class="catalog-filter-group">
+                  <legend class="catalog-filter-title catalog-filter-title-range">Стоимость, ₽:</legend>
+                  <div class="range">
+                    <div class="range-wrapper-inputs">
+                      <input class="range-input range-input-min" id="range-input-min" type="number" value="0"
+                        name="min-price">
+                      <label class="catalog-filter-label catalog-filter-label-min" for="range-input-min">от</label>
+                      <input class="range-input range-input-max" id="range-input-max" type="number" value="9000"
+                        name="max-price">
+                      <label class="catalog-filter-label catalog-filter-label-max" for="range-input-max">до</label>
+                    </div>
+                    <div class="range-scale">
+                      <div class="range-bar" style="left: 0px; width: 227px">
+                        <button class="range-toggle toggle-min">
+                          <span class="visually-hidden">Изменить минимальную цену.</span>
+                        </button>
+                        <button class="range-toggle toggle-max">
+                          <span class="visually-hidden">Изменить максимальную цену.</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+                <div class="catalog-button-holder">
+                  <button class="button button-small button-main" type="submit" value="Apply">Применить</button>
+                  <button class="button button-reset" type="reset" value="Reset">Сбросить</button>
+                </div>
               </div>
             </div>
           </form>
@@ -160,9 +199,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <div class="stars">
-            <span class="stars-items stars-items-four"></span>
-            <span class="visually-hidden">4 Звезды</span>
+          <div class="stars-raiting-holder">
+            <div class="stars">
+              <span class="stars-items stars-items-four"></span>
+              <span class="visually-hidden">4 Звезды</span>
+            </div>
             <span class="raiting">Рейтинг: 8,5</span>
           </div>
         </li>
@@ -180,9 +221,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <div class="stars">
-            <span class="stars-items stars-items-three"></span>
-            <span class="visually-hidden">4 Звезды</span>
+          <div class="stars-raiting-holder">
+            <div class="stars">
+              <span class="stars-items stars-items-three"></span>
+              <span class="visually-hidden">4 Звезды</span>
+            </div>
             <span class="raiting">Рейтинг: 8,9</span>
           </div>
         </li>
@@ -200,9 +243,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main hotel-button-current" href="#">в избранном</a>
           </div>
-          <div class="stars">
-            <span class="stars-items stars-items-two"></span>
-            <span class="visually-hidden">4 Звезды</span>
+          <div class="stars-raiting-holder">
+            <div class="stars">
+              <span class="stars-items stars-items-two"></span>
+              <span class="visually-hidden">4 Звезды</span>
+            </div>
             <span class="raiting">Рейтинг: 9,2</span>
           </div>
         </li>
@@ -220,9 +265,11 @@
             <a class="button button-small button-special" href="#">подробнее</a>
             <a class="button button-small button-main" href="#">в избранное</a>
           </div>
-          <div class="stars">
-            <span class="stars-items stars-items-two"></span>
-            <span class="visually-hidden">4 Звезды</span>
+          <div class="stars-raiting-holder">
+            <div class="stars">
+              <span class="stars-items stars-items-two"></span>
+              <span class="visually-hidden">4 Звезды</span>
+            </div>
             <span class="raiting">Рейтинг: 9,2</span>
           </div>
         </li>
