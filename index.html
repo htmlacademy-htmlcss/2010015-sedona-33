@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Седона</title>
+  <title>Седона</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
@@ -192,70 +193,69 @@
     </div>
   </footer>
   <div class="modal-container modal-container-close">
-    <div class="modal">
-      <section class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
-          <button class="modal-close-button" type="button">
-            <span class="visually-hidden">Закрыть.</span>
+    <section class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть.</span>
+        </button>
+      </div>
+      <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="field-group"> <!--При успехе ввода данных в input добавить класс "field-success", при ошибке - класс "field-error"-->
+          <label class="field-date" for="auth-arrival">Дата заезда:</label>
+          <button class="date-icon" type="button">
+            <span class="visually-hidden">Календарь.</span>
           </button>
-        </div>
-        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <input class="auth-form-field field-success field-error" type="text" id="auth-arrival" name="auth-arrival"
+            placeholder="27 апреля 2020">
           <span class="field-caption field-caption-success">На эти даты есть свободные номера. Пока есть.</span>
           <span class="field-caption field-caption-error">Мы не можем отправить вас в прошлое.</span>
-          <p class="field-group">
-            <label class="field-date" for="auth-arrival">Дата заезда:</label>
-            <button class="date-icon">
-              <span class="visually-hidden">Календарь.</span>
+        </p>
+        <p class="field-group"> <!--При успехе ввода данных в input добавить класс "field-success", при ошибке - класс "field-error"-->
+          <label class="field-date" for="auth-departure">Дата выезда:</label>
+          <button class="date-icon" type="button">
+            <span class="visually-hidden">Календарь.</span>
+          </button>
+          <input class="auth-form-field field-success field-error" type="text" id="auth-departure" name="auth-departure"
+            placeholder="1 сентября 2021">
+          <span class="field-caption field-caption-success">На эти даты есть свободные номера. Пока есть.</span>
+          <span class="field-caption field-caption-error">Мы не можем отправить вас в прошлое.</span>
+        </p>
+        <div class="field-group-container">
+          <p class="field-group-client">
+            <label class="field-date" for="auth-adult">Взрослые:</label>
+            <button class="button-volume button-min" type="button">
+              <span class="visually-hidden">Минус.</span>
             </button>
-            <input class="auth-form-field field-success field-error" type="text" id="auth-arrival" name="auth-arrival"
-              placeholder="27 апреля 2020">
-          </p>
-          <p class="field-group">
-            <label class="field-date" for="auth-departure">Дата выезда:</label>
-            <button class="date-icon">
-              <span class="visually-hidden">Календарь.</span>
+            <button class="button-volume button-max" type="button">
+              <span class="visually-hidden">Плюс.</span>
             </button>
-            <input class="auth-form-field field-success field-error" type="text" id="auth-departure"
-              name="auth-departure" placeholder="1 сентября 2021">
+            <input class="auth-form-field field" type="number" id="auth-adult" name="auth-adult" placeholder="2">
           </p>
-          <div class="field-group-container">
-            <p class="field-group-client">
-              <label class="field-date" for="auth-adult">Взрослые:</label>
-              <button class="button-volume button-min" type="button">
-                <span class="visually-hidden">Минус.</span>
-              </button>
-              <button class="button-volume button-max" type="button">
-                <span class="visually-hidden">Плюс.</span>
-              </button>
-              <input class="auth-form-field field" type="number" id="auth-adult" name="auth-adult" placeholder="2">
-            </p>
-            <p class="field-group-client">
-              <span class="field-date">
-                <label class="field-date field-date-children" for="auth-children">Дети:</label>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
-                    <span class="visually-hidden">Информация.</span>
-                  </button>
-                  <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
-                    вами, возраст которых от 6 до 18 лет.
-                    Дети до 6 лет размещаются бесплатно.</span>
-                </span>
+          <p class="field-group-client">
+            <span class="field-date">
+              <label class="field-date field-date-children" for="auth-children">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                  <span class="visually-hidden">Информация.</span>
+                </button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label">Укажите количество детей, которые будут с
+                  вами, возраст которых от 6 до 18 лет.
+                  Дети до 6 лет размещаются бесплатно.</span>
               </span>
-              <button class="button-volume button-min" type="button">
-                <span class="visually-hidden">Минус.</span>
-              </button>
-              <button class="button-volume button-max" type="button">
-                <span class="visually-hidden">Плюс.</span>
-              </button>
-              <input class="auth-form-field field" type="number" id="auth-children" name="auth-childrena"
-                placeholder="1">
-            </p>
-          </div>
-          <button class="button button-large button-main auth-form-button" type="submit">найти</button>
-        </form>
-      </section>
-    </div>
+            </span>
+            <button class="button-volume button-min" type="button">
+              <span class="visually-hidden">Минус.</span>
+            </button>
+            <button class="button-volume button-max" type="button">
+              <span class="visually-hidden">Плюс.</span>
+            </button>
+            <input class="auth-form-field field" type="number" id="auth-children" name="auth-childrena" placeholder="1">
+          </p>
+        </div>
+        <button class="button button-large button-main auth-form-button" type="submit">найти</button>
+      </form>
+    </section>
   </div>
 </body>
 
