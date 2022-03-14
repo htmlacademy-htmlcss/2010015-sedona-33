@@ -547,6 +547,10 @@
   outline: 3px solid #83B3D3;
 }
 
+.field-input:focus:invalid {
+  outline: 2px solid #FF5757;
+}
+
 .page-footer-container {
   display: flex;
   padding: 25px 55px 15px 55px;
@@ -663,19 +667,19 @@
   display: none;
 }
 
-.modal {
+.modal-content {
   position: relative;
   margin: auto;
   padding: 61px 70px 70px;
   background-color: var(--white);
   border-radius: 30px;
   width: 575px;
-  min-height: 429px;
+  height: 429px;
 }
 
 .modal-header {
   height: 50px;
-  margin-bottom: 51px;
+  margin-bottom: 48px;
 }
 
 .modal-title {
@@ -732,11 +736,11 @@
   display: none;
 }
 
-.field-caption-error .field-error {
+.field-error .field-caption-error {
   display: block;
 }
 
-.field-caption-success .field-success {
+.field-success .field-caption-success {
   display: block;
 }
 
@@ -836,7 +840,7 @@
 .field-group-container {
   display: grid;
   grid-template-columns: 288px 287px;
-  margin-bottom: 42px;
+  margin-bottom: 41px;
 }
 
 .field-group-client {
@@ -872,6 +876,7 @@
 }
 
 .button-volume:hover {
+  background-color: transparent;
   opacity: 100%;
 }
 
