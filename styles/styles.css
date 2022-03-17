@@ -553,7 +553,7 @@
 
 .page-footer-container {
   display: flex;
-  padding: 25px 55px 15px 55px;
+  padding: 25px 55px 34px 55px;
 }
 
 .social {
@@ -1449,6 +1449,7 @@
 
 .card-grid-toggle-current {
   outline: 2px solid var(--black);
+  cursor: auto;
 }
 
 .card-grid-toggle-tile {
@@ -1720,7 +1721,7 @@
   background-color: var(--white);
 }
 
-.subscribe-inner h2 {
+.subscribe-inner h3 {
   color: var(--black);
   margin-bottom: 46px;
 }
